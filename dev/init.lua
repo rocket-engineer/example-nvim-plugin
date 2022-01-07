@@ -4,6 +4,7 @@ package.loaded['dev'] = nil
 
 vim.api.nvim_set_keymap('n', '<leader>r', '<cmd>luafile dev/init.lua<cr>', {})
 
-local myplugin = require("myplugin")
-vim.api.nvim_set_keymap('n', '<leader>w', '<cmd>lua myplugin.greet()<cr>', {})
+vim.api.nvim_set_keymap('n', '<leader>w', '<cmd>lua require("myplugin").greet()<cr>', {})
+vim.api.nvim_set_keymap('n', '<leader>x', '<cmd>lua print("NvimTree:",require("myplugin").has_nvimtree())<cr>', {})
+vim.api.nvim_set_keymap('n', '<leader>z', '<cmd>lua print("Vista:",require("myplugin").has_vista())<cr>', {})
 
